@@ -70,7 +70,7 @@ split -b 2900 "$FILENAME".tmp "$CHUNKS"/"$FILENAME"_
 
 n=0
 for f in "$CHUNKS"/"$FILENAME"*; do
-  if [[ TXT -eq 0 ]]; then
+  if [[ $TXT -eq 0 ]]; then
     OUTFILE="$OUTDIR/$FILENAME-$(printf '%04d' $n).png"
   else
     OUTFILE="$OUTDIR/$FILENAME-$(printf '%04d' $n).txt"
@@ -79,7 +79,7 @@ for f in "$CHUNKS"/"$FILENAME"*; do
     echo "creating '$OUTFILE' ..."
   fi
 
-  if [[ $ASCII -eq 0 ]]; then
+  if [[ $TXT -eq 0 ]]; then
     cat "$f" | qrencode -8 -m 2 -o "$OUTFILE"
   else
     cat "$f" | qrencode -8 -t ASCII -m 2 -o "$OUTFILE"
