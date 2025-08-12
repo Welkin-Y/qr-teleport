@@ -71,9 +71,9 @@ split -b 2900 "$FILENAME".tmp "$CHUNKS"/"$FILENAME"_
 n=0
 for f in "$CHUNKS"/"$FILENAME"*; do
   if [[ TXT -eq 0 ]]; then
-    OUTFILE="codes/$FILENAME-$(printf '%04d' $n).png"
+    OUTFILE="$OUTDIR/$FILENAME-$(printf '%04d' $n).png"
   else
-    OUTFILE="codes/$FILENAME-$(printf '%04d' $n).txt"
+    OUTFILE="$OUTDIR/$FILENAME-$(printf '%04d' $n).txt"
   fi
   if [[ $VERBOSE -eq 1 ]]; then
     echo "creating '$OUTFILE' ..."
