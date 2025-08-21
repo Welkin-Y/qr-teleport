@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But not these files
+!qrteleport.sh
+!README.md
+!LICENSE
+!docs/
+!.gitignore
