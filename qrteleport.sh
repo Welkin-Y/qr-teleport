@@ -66,7 +66,7 @@ fi
 mkdir -p "$OUTDIR"
 mkdir -p "$CHUNKS"
 
-split -b 2900 "$FILENAME".tmp "$CHUNKS"/"$FILENAME"_
+split -b 2700 "$FILENAME".tmp "$CHUNKS"/"$FILENAME"_
 
 n=0
 for f in "$CHUNKS"/"$FILENAME"*; do
